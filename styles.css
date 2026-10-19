@@ -1,115 +1,201 @@
-body {
-    margin: 0;
-    background-color: #F4F1E8;
-    color: #111116;
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2b0042; 
+    color: #ffffff;
+    margin: 0;
+    padding: 40px 24px 80px 24px; 
+}
+
 
 .rozet {
     position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #DFFF00;
-    padding: 6px 12px;
-    font-weight: bold;
-    border: 2px solid #111116;
-    z-index: 10;
+    top: 20px;
+    right: 20px;
+    background-color: #05ff00; 
+    color: #000000;            
+    padding: 12px 24px;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    border: 3px solid #ffffff; 
+    border-radius: 0;          
+    z-index: 100;
 }
 
-table {
-    width: 100%;
-    background-color: #DFFF00;
-    padding: 15px;
-    border-bottom: 3px solid #111116;
+
+.top-bar {
+    display: flex;
+    max-width: 1100px;
+    margin: 10px auto 40px auto;
+    border: 3px solid #05ff00;
 }
+
+.top-bar div {
+    flex: 1;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.top-bar div:first-child {
+    border-right: 3px solid #05ff00;
+}
+
 
 .container {
-    background-color: #F4F1E8;
-    border: 3px solid #111116;
-    padding: 20px;
-    margin: 20px;
-    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
 }
 
+
 .header {
-    background-color: #111116;
-    color: #E60073;
-    padding: 25px;
-    border: 3px solid #C8CDD4;
+    margin-bottom: 10px;
 }
 
 .header h1 {
-    font-size: 40px;
-    margin: 0 0 10px 0;
+    color: #05ff00;
+    font-size: 54px;
+    margin: 0 0 12px 0;
+    line-height: 1.1;
+    letter-spacing: -1px;
 }
 
 .header h2 {
-    background-color: #DFFF00;
-    color: #111116;
-    display: inline-block;
-    padding: 3px 8px;
-    margin: 0 0 10px 0;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 0 12px 0;
 }
 
 .header p {
-    color: #F4F1E8;
+    color: #b0b0b0; /* Gri */
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.5;
 }
+
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 45px; 
+    width: 100%;
+}
+
+
+.PEMBE, .MIMARI, .TAKI {
+    border: 3px solid #ffffff;
+    border-radius: 0;
+    padding: 35px;
+    width: 100%;
+}
+
+.PEMBE h2, .MIMARI h2, .TAKI h2 {
+    margin-top: 0;
+    font-size: 26px;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+.PEMBE p, .MIMARI p, .TAKI p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+ul {
+    padding-left: 22px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
 
 .PEMBE {
-    background-color: #E60073;
-    color: white;
-    padding: 20px;
-    margin: 20px 0;
-    border: 2px solid #111116;
+    background-color: #6a00ba;
+    color: #ffffff;
+    border-color: #05ff00;
+}
+.PEMBE h2 {
+    color: #05ff00;
 }
 
-.PEMBE h2 {
-    color: #DFFF00;
-}
 
 .MIMARI {
-    background-color: #F4F1E8;
-    padding: 20px;
-    margin: 20px 0;
-    border: 3px solid #164BFF;
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
 }
-
 .MIMARI h2 {
-    color: #164BFF;
+    color: #6a00ba;
+}
+.MIMARI p, .MIMARI ul {
+    color: #222222;
 }
 
-.MAVI {
-    background-color: #164BFF;
-    color: white;
-    padding: 20px;
-    margin: 20px 0;
-    border: 3px solid #C8CDD4;
+
+.TAKI {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #05ff00;
+}
+.TAKI h2 {
+    color: #05ff00;
+}
+.TAKI p, .TAKI ul {
+    color: #d1d1d1;
 }
 
-.MAVI h2 {
-    color: #DFFF00;
-}
 
-.gorsel-kutusu {
-    background-color: #111116;
-    color: #C8CDD4;
-    border: 2px dashed #DFFF00;
-    padding: 30px;
-    text-align: center;
+.foto-kutusu {
+    width: 100%;
+    min-height: 420px; 
+    border: 3px dashed #888888;
+    background-color: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
-    margin: 15px 0;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin-top: 25px;
 }
 
+.MIMARI .foto-kutusu {
+    background-color: #ebebeb;
+    border-color: #333333;
+    color: #111111;
+}
+
+/* FOOTER */
 .footer {
-    background-color: #111116;
-    color: #F4F1E8;
-    padding: 20px;
     text-align: center;
-    margin-top: 20px;
-    border-top: 3px solid #E60073;
+    border-top: 3px solid #05ff00;
+    padding-top: 40px;
+    margin-top: 70px;
 }
 
 .footer h2 {
-    color: #DFFF00; /* ENJOY INSIDE OF MY HEAD fosforlu sarı/yeşil oldu */
-    margin: 0 0 10px 0;
+    color: #05ff00;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    font-size: 15px;
+    color: #888888;
 }
